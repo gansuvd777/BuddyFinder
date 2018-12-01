@@ -1,2 +1,2 @@
 # BuddyFinder
-Simple way for you to find someone to do stuff with ⌘
+A fun little personality quiz to show which celebrity you have most in common with! ⌘

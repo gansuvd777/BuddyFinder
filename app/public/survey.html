@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>|Buddy Finder|</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='crossorigin='anonymous'></script> -->
+</head>
+<body>
+
+    <div class="container text-center">
+        <header>
+            <H2>Welcome to the Coding Buddy Finder App!</H2>
+            <h1>Survey</h1>
+		<p>Take a quick survey to find your perfect matching Buddy for Coding, Happy Coding! <img src="https://image.flaticon.com/icons/svg/74/74868.svg" alt="coding" height="20px"> </p>
+		<form>
+			<div class="form-group">
+				<input id="name" type="text" class="form-control" placeholder="Enter your Name (Required)">
+			</div>
+			<div class="form-group">
+				<input id="photo" type="text" class="form-control" placeholder="Link to your Profile Photo (Required)">
+			</div>
+			<div class="form-group">
+				<label for="question1">How do your rate your HTML skill? <img src="https://image.flaticon.com/icons/svg/25/25252.svg" alt="html logo" height="30px"></label>
+				<select class="form-control" id="question1">
+					<option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question2">How do your rate your CSS skill?  <img src="https://i.pinimg.com/originals/81/27/87/812787da4d82249d8fd7a6cbecab8afa.png" alt="css logo" height="40px"> </label>
+				<select class="form-control" id="question2">
+					<option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question3">How do your rate your JavaScript skill?  <img src="https://image.flaticon.com/icons/svg/1199/1199124.svg" alt="js logo" height="30px"> </label>
+				<select class="form-control" id="question3">
+                    <option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question4">How do your rate your JQuery skill?  <img src="http://fortimelp.fr/274-large_default/formation-jquery-3-jours.jpg" alt="jquery" height="55px"> </label>
+				<select class="form-control" id="question4">
+                    <option value="empty"></option>
+                    <option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question5">How do your rate your Bootstrap skill?   <img src="https://applabx.com/wp-content/uploads/2017/06/bootstrap-logo.png" alt="bootstrap logo" height="45px"> </label>
+				<select class="form-control" id="question5">
+                    <option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question6">How do your rate your Node.js skill? <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" alt="node logo" height="40px"> </label>
+				<select class="form-control" id="question6">
+                    <option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question7">How do your rate your GitHub skill?  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="github logo" height="30px"> </label>
+				<select class="form-control" id="question7">
+                    <option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question8">How do your rate your REACT skill? <img src="https://cdn-images-1.medium.com/max/1200/1*ypTuZbQNEV1oGkAfn85AUA.png" alt="react logo" height="40px"> </label>
+				<select class="form-control" id="question8">
+                    <option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question9">How do your rate your REDUX skill? <img src="https://cms-assets.tutsplus.com/uploads/users/30/posts/31650/preview_image/pre-1.png" alt="redux" height="40px"> </label>
+				<select class="form-control" id="question9">
+                    <option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question10">How do your rate your MySQL skill?<img src="https://cdn2.iconfinder.com/data/icons/programming-5/24/MySQL-Database-512.png" alt="mysql logo" height="40px"></label>
+				<select class="form-control" id="question10">
+                    <option value="empty"></option>
+					<option value="1">1 (Below average)</option>
+					<option value="2">2 (Average)</option>
+					<option value="3">3 (Barely above average to very good)</option>
+					<option value="4">4 (Outstanding)</option>
+					<option value="5">5 (Extraordinary)</option>
+				</select>
+			</div>
+		</form>
+		<div class="text-center">
+			<button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
+		</div>
+		
+		<!-- Modal after survey completion -->
+		<div id="bestBuddiesModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title"> 👇🏻 Your best Coding Buddy to be 👇🏻 </h1>
+					</div>
+					<div class="modal-body">
+						<h2 id="bestBuddies"></h2>
+						<img id="bestBuddiesPhoto" src="#">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <footer>
+            <div>
+                <a href="/">Home Page <img src="https://cdn3.iconfinder.com/data/icons/glypho-free/64/home-128.png" alt="homepage" height="20px"></a></a>
+                <span> | </span>
+                <a href="/api/buddies">API Buddies List  <img src="https://cdn4.iconfinder.com/data/icons/resolutions/32/resolution-05-512.png" alt="list" height="20px"></a>
+                <span> | </span>
+                <a href="https://github.com/gansuvd777/BuddyFinder">GitHub Repo  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-512.png" alt="GitHub" height="20px"></a>
+            </div>
+        </footer>
+    </div>
+    <script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        //config for no matching -- still working on it
+
+
+
+        $("#submitBtn").on("click", function(event) {
+		event.preventDefault();
+		// Form validation
+		var valid = true;
+		if($("#name").val() === "" || $("#photo").val() === "") {
+			valid = false;
+        } else if($("#question1").val() === "empty" || 
+        $("#question2").val() === "empty" || 
+        $("#question3").val() === "empty" || 
+        $("#question4").val() === "empty" || 
+        $("#question5").val() === "empty" || 
+        $("#question6").val() === "empty" || 
+        $("#question7").val() === "empty" || 
+        $("#question8").val() === "empty" || 
+        $("#question9").val() === "empty" || 
+        $("#question10").val() === "empty") 
+        {
+			valid = false;
+		}
+		if(valid === true) {
+			var newUser = {
+				name: $("#name").val().trim(),
+				photo: $("#photo").val().trim(),
+				scores: [
+					$("#question1").val(),
+					$("#question2").val(),
+					$("#question3").val(),
+					$("#question4").val(),
+					$("#question5").val(),
+					$("#question6").val(),
+					$("#question7").val(),
+					$("#question8").val(),
+					$("#question9").val(),
+					$("#question10").val()
+				]
+			};
+			var currentURL = window.location.origin;
+			// Ajax call for receiving response after POST req
+            $.post(currentURL + "/api/buddyData", newUser, function(data) 
+            {
+				$("#bestBuddies").text(data.name);
+                $("#bestBuddiesPhoto").attr("src", data.photo);
+                
+				$("#bestBuddiesModal").modal("toggle");
+			});
+		} else {
+			alert("Survey is incomplete!  ☝🏻 🧐 🧐 ");
+		}
+	});
+</script>
+    
+    
+</body>
+</html>

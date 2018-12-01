@@ -1,0 +1,23 @@
+{
+  "name": "buddyfinder",
+  "version": "1.0.0",
+  "description": "Simple way for you to find someone to do stuff with ⌘",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gansuvd777/BuddyFinder.git"
+  },
+  "author": "Pearl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gansuvd777/BuddyFinder/issues"
+  },
+  "homepage": "https://github.com/gansuvd777/BuddyFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
