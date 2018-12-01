@@ -1,2 +1,2 @@
 # BuddyFinder
-A fun little personality quiz to show which celebrity you have most in common with! ⌘
+### Simple way for you to find someone to peer code with, "Hello World!" ⌘⌘
