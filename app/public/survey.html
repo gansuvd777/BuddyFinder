@@ -179,7 +179,7 @@
 					</div>
 					<div class="modal-body">
 						<h2 id="bestBuddies"></h2>
-						<img id="bestBuddiesPhoto" src="#">
+						<img id="bestBuddiesPhoto" height="120px" src="#">
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -257,7 +257,7 @@
 			
 			var currentURL = window.location.origin;
 			// Ajax call for receiving response after POST req
-            $.post(currentURL + "/api/buddies", newUser, function(data) 
+            $.post(currentURL + "/api/buddyData", newUser, function(data) 
             {
 				$("#bestBuddies").text(data.name);
                 $("#bestBuddiesPhoto").attr("src", data.photo);
