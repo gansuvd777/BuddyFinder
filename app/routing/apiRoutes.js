@@ -31,7 +31,7 @@ module.exports = function(app) {
         minimumDifference = totalDifference;
       }
     }
-    // after finding match, adding user to buddyData array
+    // after finding match, adding user to buddies array
     buddies.push(user);
 
     // sending back to browser the best buddies match
