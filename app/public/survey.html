@@ -170,7 +170,26 @@
 		<hr>
 		
 		<!-- Modal after survey completion -->
-		<div id="bestBuddiesModal" class="modal fade" role="dialog">
+		<div class="modal fade" id="bestBuddiesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">👇🏻 Your best Coding Buddy to be 👇🏻 </h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="bestBuddiesModal" class="modal fade" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -186,7 +205,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
         <section>
             <div>
@@ -252,21 +271,34 @@
 					$("#question10").val()
 				]
 			};
-	
-			var currentURL = window.location.origin;
-			// Ajax call for receiving response after POST req
-            $.post(currentURL + "/api/buddyData", newUser, function(data) 
-            {
-				$("#bestBuddies").text(data.name);
-                $("#bestBuddiesPhoto").attr("src", data.photo);
-	
-				$("#bestBuddiesModal").modal("toggle");
-			});
-		} else {
+		}else {
 			alert("Survey is incomplete!  ☝🏻 🧐 🧐 ");
 		}
 		document.getElementsByClassName('.form-control').value = ' ';
-	});
+	
+
+			//Clear Data
+			// $("#name").val("");
+			// $("#photo").val("");
+
+			// for (let i = 1; i < 11; i++) {
+			// 	$("#question" + i).val("Choose...");
+			// }
+			$.post("/api/buddies", newUser)
+				.then(function (data) {
+					let bestBuddies = $("<h3>")
+						.text("Name: " + data.name);
+					let bestBuddiesPhoto = $("<img>").attr("src", data.photo)
+						.addClass("profile-pic")
+						.css("width", "300");
+
+					$(".modal-body").empty();
+					$(".modal-body").append(bestBuddies, bestBuddiesPhoto);
+
+					$('#bestBuddiesModal').modal('show');
+				});
+			})
+	
 </script>
     
     
